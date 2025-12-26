@@ -30,6 +30,10 @@
         }
         
         // TODO: Add listener for postMessage
+        window.addEventListener('message', e => {
+            document.querySelector('main');
+            document.querySelector('main').style.backgroundColor = '#' + e.data;
+        });
     </script>
 </body>
 </html>
