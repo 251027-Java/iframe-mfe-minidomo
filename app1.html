@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        this is app 1
+    </p>
+    <button onclick="changeColor()">Change Shell Color</button>
+
+    <script>
+        function changeColor() {
+            window.parent.postMessage(randomColor());
+        }
+
+        function randomColor() {
+            return Math.floor(Math.random() * 0xffffff).toString(16);
+        }
+    </script>
+</body>
+
+</html>
